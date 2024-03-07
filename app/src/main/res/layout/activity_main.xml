@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/puple"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="0sp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20sp"
+            android:layout_gravity="center"
+            app:strokeWidth="2sp"
+            app:strokeColor="@color/black"
+            android:layout_marginVertical="8sp"
+            android:elevation="20sp"
+            app:cardBackgroundColor="@color/white">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:background="@null"
+
+
+                android:hint="Enter First Number"
+                android:inputType="numberSigned|numberDecimal"
+                android:padding="15sp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/grey"
+                android:textSize="20sp"
+                app:cardBackgroundColor="@color/white"
+                />
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20sp"
+            app:strokeColor="@color/black"
+            app:strokeWidth="2sp"
+            android:layout_gravity="center"
+            android:layout_marginVertical="8sp"
+            android:elevation="20sp"
+            app:cardBackgroundColor="@color/white">
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/input2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+
+                android:hint="Enter Second Number"
+                android:gravity="center"
+                android:inputType="numberSigned|numberDecimal"
+                android:padding="15sp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/grey"
+                android:textSize="20sp"
+                />
+        </com.google.android.material.card.MaterialCardView>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="25sp"
+            android:layout_marginTop="25sp"
+            android:weightSum="4"
+            app:layout_constraintEnd_toEndOf="@id/input2"
+            app:layout_constraintStart_toStartOf="@id/input2"
+            app:layout_constraintTop_toBottomOf="@id/input2">
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/plus"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/pista"
+                android:text="+"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:strokeWidth="2sp" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/minus"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/pista"
+                android:text="-"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:strokeWidth="2sp" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/multiply"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/pista"
+                android:text="*"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:strokeWidth="2sp" />
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/divide"
+                android:layout_width="0sp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:backgroundTint="@color/pista"
+                android:text="/"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                app:strokeWidth="2sp" />
+        </LinearLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="15sp"
+            android:layout_marginTop="12sp"
+            android:layout_marginEnd="15sp"
+            android:elevation="20sp"
+            app:strokeWidth="1sp">
+            <TextView
+                android:id="@+id/result"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:paddingHorizontal="25sp"
+                android:paddingVertical="15sp"
+                android:text="Result"
+                android:background="@color/white"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="20sp" />
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
